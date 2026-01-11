@@ -1,19 +1,9 @@
-<!DOCTYPE html>
 <html>
 <head>
-<title>Dynamic Page with Animation</title>
+<title>Animation</title>
 <style>
-.layer {
-    width: 200px;
-    height: 200px;
-    background-color: skyblue;
-    position: absolute;
-    text-align: center;
-    line-height: 200px;
-    border-radius: 10px;
-    left: 0;
-    top: 100px;
-}
+.layer{width:200px;height:200px;background:skyblue;position:absolute;
+text-align:center;line-height:200px;border-radius:10px;top:100px}
 </style>
 </head>
 
@@ -21,19 +11,12 @@
 <div id="movingLayer" class="layer">Web Programming</div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const layer = document.getElementById("movingLayer");
-    let position = 0;
-    let direction = 1;
-
-    setInterval(() => {
-        if (position > window.innerWidth - 200 || position < 0) {
-            direction *= -1;
-        }
-        position += 5 * direction;
-        layer.style.left = position + "px";
-    }, 50);
-});
+let p=0,d=1,l=movingLayer;
+setInterval(()=>{
+ if(p>innerWidth-200||p<0)d*=-1;
+ l.style.left=(p+=5*d)+"px";
+},50);
 </script>
 </body>
 </html>
+
