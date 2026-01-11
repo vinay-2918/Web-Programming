@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sum of Natural Numbers</title>
+
+<script>
+function sumOfNaturalNumbers(n) {
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        sum += i;
+    }
+    return sum;
+}
+
+function calculateSum() {
+    let n = parseInt(document.getElementById("numberInput").value);
+
+    if (!isNaN(n) && n > 0) {
+        let sum = sumOfNaturalNumbers(n);
+        alert("Sum of first " + n + " natural numbers is: " + sum);
+    } else {
+        alert("Please enter a positive integer.");
+    }
+}
+</script>
+
+</head>
+<body>
+<h2>Sum of N Natural Numbers</h2>
+<label>Enter a number:</label>
+<input type="number" id="numberInput">
+<button onclick="calculateSum()">Calculate Sum</button>
+</body>
+</html>
